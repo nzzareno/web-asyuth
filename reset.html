@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>:::ASYUTH DESIGN:::</title>
+    <link rel="shortcut icon" href="#" />
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.js"></script>
+    <link rel="stylesheet" type="text/css" href="alertifyjs/css/alertify.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="alertifyjs/css/themes//default.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/reset.css" />
+  </head>
+  <body id="negrax">
+    <div data-scroll-container id="ff">
+      <main>
+        <section class="container reset-container">
+          <fieldset>
+            <div>
+              <img src="./img/reset.svg" />
+              <!--https://www.visualpharm.com/free-icon-->
+            </div>
+            <div>
+              <label for="mail">Email</label> <br />
+              <input type="email" id="inbox" name="mail" />
+            </div>
+            <button id="resetPassword">
+              Confirm
+            </button>
+          </fieldset>
+        </section>
+        <div class="feedbackContainer success">
+          <div class="feedbackIcon"></div>
+          <p class="feedbackMessage">Signed up Successfully</p>
+        </div>
+        <div class="feedbackContainer failure">
+          <div class="feedbackIcon"></div>
+          <p class="feedbackMessage">Signing up failed</p>
+        </div>
+      </main>
+    </div>
+
+    <script src="alertifyjs/alertify.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/e94b7f31b9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="module" src="./js/reset.js"></script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
+      import {
+        getAuth,
+        GoogleAuthProvider,
+        signInWithPopup,
+        sendPasswordResetEmail,
+      } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js";
+      import {
+        getDatabase,
+        set,
+        ref,
+        update,
+      } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
+      import {
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        onAuthStateChanged,
+        signOut,
+      } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyC6GinpZ9regJO7SKla3y5K-g5GzFapBg0",
+        authDomain: "signin-95fb6.firebaseapp.com",
+        projectId: "signin-95fb6",
+        storageBucket: "signin-95fb6.appspot.com",
+        messagingSenderId: "24391928391",
+        appId: "1:24391928391:web:2a861798a4d3538da87f62",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const database = getDatabase(app);
+      const auth = getAuth(app);
+      const provider = new GoogleAuthProvider(app);
+
+      const user = auth.currentUser;
+
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          // User is signed in, see docs for a list of available properties
+          // https://firebase.google.com/docs/reference/js/firebase.User
+          const uid = user.uid;
+
+          // ...
+        } else {
+          // User is signed out
+          // ...
+        }
+      });
+
+
+    </script>
+  </body>
+</html>

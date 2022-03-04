@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Quicksand");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/parent1.jpg);
+  background-size: 125%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  background-position-x: 25%;
+}
+
+.form-modal {
+  position: relative;
+  width: 400px;
+  height: auto;
+  margin-top: 10.3em;
+  left: 86.7%;
+  transform: translateX(-50%);
+  background: #fff3f3;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.form-modal button {
+  cursor: pointer;
+  position: relative;
+  text-transform: capitalize;
+  font-size: 1em;
+  z-index: 2;
+  outline: none;
+  background: #fff3f3;
+  transition: 0.2s;
+}
+
+.form-modal .btn {
+  border-radius: 50px;
+  border: none;
+  font-weight: 500;
+  font-size: 1em;
+  padding: 0.8em 1em 0.8em 1em !important;
+  transition: 0.5s;
+  border: 0.7px solid #ebebeb;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+
+.form-modal .login,
+.form-modal .signup {
+  background: #000000;
+  color: #fff;
+}
+
+.form-modal .login:hover,
+.form-modal .signup:hover {
+  background: #333333;
+}
+
+.form-toggle {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.form-toggle button {
+  width: 50%;
+  float: left;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  border: none;
+  transition: 0.5s;
+  font-size: 1.1em;
+  font-weight: 500;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.form-toggle button:nth-child(1) {
+  border-bottom-right-radius: 20px;
+}
+
+.form-toggle button:nth-child(2) {
+  border-bottom-left-radius: 20px;
+}
+
+#login-toggle {
+  background: #000000;
+  color: #ffff;
+}
+
+.form-modal form {
+  position: relative;
+  width: 90%;
+  height: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#login-form,
+#signup-form {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 1em;
+}
+
+#signup-form {
+  display: none;
+}
+
+#login-form button,
+#signup-form button {
+  width: 100%;
+  margin-top: 0.5em;
+  padding: 0.6em;
+}
+
+.form-modal input {
+  position: relative;
+  width: 100%;
+  font-size: 1em;
+  padding: 1.2em 1.7em 1.2em 1.7em;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+  border-radius: 20px;
+  border: none;
+  background: #ebebeb;
+  outline: none;
+  font-weight: 500;
+  transition: 0.4s;
+}
+
+.form-modal input:focus,
+.form-modal input:active {
+  transform: scaleX(1.07);
+}
+
+.form-modal input::-webkit-input-placeholder {
+  color: rgb(34, 34, 34);
+}
+
+.form-modal p {
+  font-size: 10.77px;
+  font-weight: 500;
+}
+
+.form-modal p a {
+  color: rgb(35, 74, 248);
+  text-decoration: none;
+  transition: 0.7s;
+}
+
+.form-modal p a:hover {
+  text-decoration: underline;
+}
+
+.form-modal i {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateX(-10%) translateY(-50%);
+}
+
+.fa-google {
+  color: #b30000;
+}
+
+.fa-linkedin {
+  color: #3b5998;
+}
+
+.fa-windows {
+  color: #0072c6;
+}
+
+.-box-sd-effect:hover {
+  box-shadow: 0 4px 8px hsla(0, 1%, 37%, 0.2);
+  outline: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .form-modal {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  i {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .form-modal {
+    position: relative;
+    width: 400px;
+    height: auto;
+    margin-top: 10.3em;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff3f3;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-image: url(../img/parent1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    background-position-x: 60%;
+  }
+
+  .form-modal {
+    position: relative;
+    width: 420px;
+    height: auto;
+    margin-top: 10.3em;
+    left: 47.5%;
+    transform: translateX(-50%);
+    background: #fff3f3;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 3px 20px 0px rgba(255, 255, 255, 0.1);
+  }
+}
+
+svg {
+  font-family: "Russo One", sans-serif;
+  position: absolute;
+  bottom: 45.8%;
+  right: 38.3%;
+  width: 100%;
+  height: 100%;
+}
+svg text {
+  text-transform: uppercase;
+  animation: stroke 1.8s alternate;
+
+  letter-spacing: 2px;
+
+  font-size: 70px;
+}
+@keyframes stroke {
+  0% {
+    fill: rgba(255, 255, 255, 0);
+    stroke: rgba(0, 0, 0, 0.424);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+  70% {
+    fill: rgba(146, 255, 63, 0);
+    stroke: rgba(0, 0, 0, 0.281);
+  }
+  80% {
+    fill: rgba(255, 255, 255, 0);
+    stroke: rgba(0, 0, 0, 0.287);
+    stroke-width: 2;
+  }
+  100% {
+    fill: rgb(0, 0, 0);
+    stroke: rgb(0, 0, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
